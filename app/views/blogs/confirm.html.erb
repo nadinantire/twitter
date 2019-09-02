@@ -1,0 +1,9 @@
+<h3>Send it with the following contents.</h3>
+
+<%= form_with(model: @blog, url: blogs_path, local: true) do |form| %>
+  <%= form.hidden_field :title %>
+  <%= form.hidden_field :content %>
+
+  <p>Body:<%= @blog.content %></p>
+  <%= form.submit  "confirm", class: "btn btn-primary"  %>
+<% end %>
